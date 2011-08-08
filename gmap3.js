@@ -1242,7 +1242,8 @@
       } else {
         o.options.position = latLng;
         o.options.map = this._getMap(id);
-        result = new google.maps.Marker(o.options);
+        //using : MarkerWithLabel extends the Google Maps JavaScript API V3 google.maps.Marker class.
+        result = new MarkerWithLabel(o.options);
         if ( todo[niw] ){
           oi = this._object(niw, todo[niw], ['open']);
           if ( (oi['open'] === undefined) || oi['open'] ) {
@@ -1309,7 +1310,8 @@
             o.options = options;
           }
           o.options.position = latLng;
-          marker = new google.maps.Marker(o.options);
+          //using : MarkerWithLabel extends the Google Maps JavaScript API V3 google.maps.Marker class.
+          marker = new MarkerWithLabel(o.options);
           result.push(marker);
           o.data = markers[k].data;
           o.tag = markers[k].tag;
